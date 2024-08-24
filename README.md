@@ -12,7 +12,7 @@ Here the step to run the project locally
    ```
 2. Change directory to the project
    ```bash
-   cd LMS-backend
+   cd API-Cuti-Karyawan
    ```
 3. Install dependencies
    ```bash
