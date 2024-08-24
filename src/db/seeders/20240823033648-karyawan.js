@@ -11,6 +11,8 @@ module.exports = {
         alamat: "Jln Gaja Mada no 12, Surabaya",
         tgl_lahir: new Date("1980-01-11"),
         tgl_gabung: new Date("2005-08-07"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -19,6 +21,8 @@ module.exports = {
         alamat: "Jln Imam Bonjol no 11, Mojokerto",
         tgl_lahir: new Date("1977-12-03"),
         tgl_gabung: new Date("2005-08-07"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -27,6 +31,8 @@ module.exports = {
         alamat: "Jln Bungur Sari V no 166, Bandung",
         tgl_lahir: new Date("1983-03-18"),
         tgl_gabung: new Date("2006-08-07"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -35,6 +41,8 @@ module.exports = {
         alamat: "Jln Candi Agung, No 78 Gg 5, Jakarta",
         tgl_lahir: new Date("1978-11-10"),
         tgl_gabung: new Date("2010-09-10"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -43,6 +51,8 @@ module.exports = {
         alamat: "	Jln Nangka, Jakarta Timur",
         tgl_lahir: new Date("1979-02-07"),
         tgl_gabung: new Date("2007-01-02"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -51,6 +61,8 @@ module.exports = {
         alamat: "Jln Merpati, 8 Surabaya",
         tgl_lahir: new Date("1989-05-18"),
         tgl_gabung: new Date("2007-04-04"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -59,6 +71,8 @@ module.exports = {
         alamat: "Jln A Yani 17, B 08 Sidoarjo",
         tgl_lahir: new Date("1985-04-14"),
         tgl_gabung: new Date("2007-05-19"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -67,6 +81,8 @@ module.exports = {
         alamat: "Jln Kaliurang KM 5, Yogyakarta",
         tgl_lahir: new Date("1982-06-09"),
         tgl_gabung: new Date("2008-01-04"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -75,6 +91,8 @@ module.exports = {
         alamat: "Jln Duren tiga 167, Jakarta Selatan",
         tgl_lahir: new Date("1984-01-01"),
         tgl_gabung: new Date("2008-01-16"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
       {
         id: Sequelize.fn("gen_random_uuid"),
@@ -83,6 +101,8 @@ module.exports = {
         alamat: "Jln Kelapa Sawit, Jakarta Selatan",
         tgl_lahir: new Date("1990-12-17"),
         tgl_gabung: new Date("2008-08-16"),
+        created_at: new Date(),
+        updated_at: new Date(),
       },
     ];
     await queryInterface.bulkInsert("Karyawans", data, {});

@@ -17,7 +17,7 @@ export const Models = {};
  * @param {import('sequelize').Sequelize} sequelize
  * @param {import('sequelize').DataTypes} DataTypes
  */
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
   class Cuti extends Model {
     /**
      * Helper method for defining associations.
@@ -26,7 +26,10 @@ module.exports = (sequelize, DataTypes) => {
      * @param {Record<import('./index.js').ModelName, any>} models
      */
     static associate(models) {
-      // define association here
+      Cuti.belongsTo(models.Karyawan, {
+        foreignKey: "karyawan_id",
+        as: "karyawan",
+      });
     }
   }
   Cuti.init(
@@ -46,6 +49,10 @@ module.exports = (sequelize, DataTypes) => {
       keterangan: {
         type: DataTypes.TEXT,
         allowNull: true,
+      },
+      karyawan_id: {
+        type: DataTypes.UUID,
+        allowNull: false,
       },
     },
     {

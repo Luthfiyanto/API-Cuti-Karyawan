@@ -10,6 +10,7 @@ import { Model } from "sequelize";
  * @property {string} tgl_gabung
  * @property {string} created_at
  * @property {string} updated_at
+ * @property {number} max_nomor_induk
  */
 
 export const Models = {};
@@ -27,7 +28,10 @@ export default (sequelize, DataTypes) => {
      * @param {Record<import('./index.js').ModelName, any>} models
      */
     static associate(models) {
-      // define association here
+      Karyawan.hasMany(models.Cuti, {
+        foreignKey: "karyawan_id",
+        as: "cuti",
+      });
     }
   }
   Karyawan.init(
@@ -35,6 +39,10 @@ export default (sequelize, DataTypes) => {
       nomor_induk: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: {
+          name: "nomor_induk",
+          msg: "Nomor induk karyawan harus unik",
+        },
       },
       nama: {
         type: DataTypes.TEXT,

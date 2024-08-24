@@ -9,6 +9,7 @@ import config from "../../db/config/database.js";
  * @property {Sequelize} sequelize
  * @property {Sequelize} Sequelize
  * @property {ReturnType<typeof import('./karyawan.js').default>} Karyawan
+ * @property {ReturnType<typeof import('./cuti.js').default>} Cuti
  */
 
 /** @typedef {keyof Omit<Database, 'sequelize' | 'Sequelize'>} ModelName */
@@ -51,4 +52,4 @@ async function initializeDatabase() {
   return /** @type {Database} */ (/** @type {unknown} */ (db));
 }
 
-export const { sequelize, Karyawan } = await initializeDatabase();
+export const { sequelize, Karyawan, Cuti } = await initializeDatabase();

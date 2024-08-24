@@ -24,6 +24,10 @@ module.exports = {
       keterangan: {
         type: Sequelize.TEXT,
       },
+      karyawan_id: {
+        type: Sequelize.UUID,
+        allowNull: false,
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,

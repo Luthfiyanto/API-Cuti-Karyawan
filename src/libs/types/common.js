@@ -1,5 +1,3 @@
-import * as UserModel from "../../api/models/user.js";
-
 /**
  * Function type for middleware.
  *
@@ -33,16 +31,6 @@ import * as UserModel from "../../api/models/user.js";
  *
  * @template {Middleware<ExtractLocalsMiddleware<T>>} T
  * @typedef {Record<string, any> & Parameters<T>[1]['locals']} ExtractLocalsMiddleware
- */
-
-/**
- * Function type for authorized controller.
- *
- * @template {Middleware<ExtractLocalsMiddleware<T>>} [T=Middleware] Default is.
- *   Default is `Middleware`
- * @typedef {Controller<
- *   Middleware<{ user: UserModel.UserAttributes } & ExtractLocalsMiddleware<T>>
- * >} AuthorizedController
  */
 
 /** @typedef {import('express').Request['query']} RequestQuery */
