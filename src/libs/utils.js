@@ -17,3 +17,17 @@ export async function incrementNomorInduk() {
     throw generateApplicationError(err, "Error while generate new nomor induk", 500);
   }
 }
+
+/** @param {string} nomor_induk */
+export async function getKaryawanIdByNomorInduk(nomor_induk) {
+  try {
+    const karyawan = await KaryawanRepository.getKaryawanByNomorInduk(nomor_induk);
+    if (!karyawan) {
+      throw new ApplicationError("Karyawan not found", 404);
+    }
+
+    return karyawan.dataValues.id;
+  } catch (err) {
+    throw generateApplicationError(err, "Error while get karyawan id by nomor induk", 500);
+  }
+}
