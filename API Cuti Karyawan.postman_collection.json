@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "f17b89aa-8cb6-4349-bf27-2af0a0394ccd",
+		"name": "API Cuti Karyawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31489020"
+	},
+	"item": [
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "get all data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/karyawan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get data by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/karyawan/feca121b-bf26-4859-acd6-b3c8cc076173",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan",
+								"feca121b-bf26-4859-acd6-b3c8cc076173"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get data by nomor induk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/karyawan/code/IP06001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan",
+								"code",
+								"IP06001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nama\": \"Luyi\",\r\n        \"alamat\": \"Jln Taman Siswa, Sekaran, Semarang\",\r\n        \"tgl_lahir\": \"2004-02-26\",\r\n        \"tgl_gabung\": \"2010-04-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/karyawan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nama\": \"Luyi\",\r\n        \"alamat\": \"Jln Patemon Raya, Gunungpati, Semarang\",\r\n        \"tgl_lahir\": \"2004-02-26\",\r\n        \"tgl_gabung\": \"2010-04-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/karyawan/02328301-27a6-4d42-a5f7-9960e3cdd004",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan",
+								"02328301-27a6-4d42-a5f7-9960e3cdd004"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nama\": \"Yue Jin\",\r\n        \"alamat\": \"Jln Taman Siswa, Sekaran, Semarang\",\r\n        \"tgl_lahir\": \"2004-02-26\",\r\n        \"tgl_gabung\": \"2010-04-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/karyawan/02328301-27a6-4d42-a5f7-9960e3cdd004",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"karyawan",
+								"02328301-27a6-4d42-a5f7-9960e3cdd004"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuti",
+			"item": [
+				{
+					"name": "get all data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cuti",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cuti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get data by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/cuti/a8ad3a8c-bfd2-4de6-8352-1ad56d3a9880",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cuti",
+								"a8ad3a8c-bfd2-4de6-8352-1ad56d3a9880"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06010\",\r\n    \"tgl_cuti\": \"2020-08-30\",\r\n    \"lama_cuti\": 2,\r\n    \"keterangan\": \"Acara Wisuda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cuti",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cuti"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06010\",\r\n    \"tgl_cuti\": \"2020-09-3\",\r\n    \"lama_cuti\": 1,\r\n    \"keterangan\": \"Acara Wisuda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cuti/e22522ee-92b8-4b22-a857-738fd5c01c82",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cuti",
+								"e22522ee-92b8-4b22-a857-738fd5c01c82"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06006\",\r\n    \"tgl_cuti\": \"2020-08-19\",\r\n    \"lama_cuti\": 1,\r\n    \"keterangan\": \"Nenek Sakit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cuti/e22522ee-92b8-4b22-a857-738fd5c01c82",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cuti",
+								"e22522ee-92b8-4b22-a857-738fd5c01c82"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
