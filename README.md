@@ -1,6 +1,6 @@
 # API Cuti Karyawan
 
-a simple REST API which made using Express.js and Sequelize
+a simple REST API which is made using Express.js and Sequelize
 
 ## Development
 
@@ -35,3 +35,19 @@ Here the step to run the project locally
    ```bash
    npm run dev
    ```
+
+## API Test
+You can use postman to test the API by importing file named `API Cuti Karyawan.postman_collection.json` or you can see these following API endpoint below.
+   1. Karyawan
+      - GET /karyawan
+      - GET /karyawan/:id
+      - GET /karyawan/code/:nomorInduk
+      - POST /karyawan
+      - PUT /karyawan/:id
+      - DELETE /karyawan/:id
+   3. Cuti
+      - GET /cuti
+      - GET /cuti/:id
+      - POST /cuti
+      - PUT /cuti/:id
+      - DELETE /cuti/:id
